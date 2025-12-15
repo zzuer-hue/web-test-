@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        /* 头部导航 */
+        header {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        /* 个人简介 */
+        .profile {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .profile-img {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        .profile-img img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+        }
+        .profile-info {
+            flex: 2;
+            min-width: 250px;
+            padding-left: 30px;
+        }
+        .profile-info h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .profile-info p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin: 5px 5px 5px 0;
+            font-size: 14px;
+        }
+        /* 技能板块 */
+        .skills {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 28px;
+        }
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skill-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+            border-color: #3498db;
+        }
+        .skill-item i {
+            font-size: 40px;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        /* 底部 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .profile-info {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+            .nav-links a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <nav>
+            <div class="logo">我的主页</div>
+            <div class="nav-links">
+                <a href="#profile">首页</a>
+                <a href="#skills">技能</a>
+                <a href="#contact">联系我</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 个人简介 -->
+    <section class="profile" id="profile">
+        <div class="profile-img">
+            <img src="D:\lenovo\Pictures\屏幕截图\微信图片_20251215170134_149_13.jpg" alt="个人头像">
+        </div>
+        <div class="profile-info">
+            <h1>大一编程&CTF爱好者</h1>
+            <p>目前正在学习 C语言、线性代数、微积分等课程，同时深耕 Web 方向 CTF 竞赛，喜欢拆解技术原理，用代码解决实际问题。</p>
+            <p>熟悉 Kali Linux 基本操作，热衷于探索网络安全与程序开发的底层逻辑。</p>
+            <div>
+                <span class="tag">C语言</span>
+                <span class="tag">Web安全</span>
+                <span class="tag">CTF</span>
+                <span class="tag">Kali Linux</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能板块 -->
+    <section class="skills" id="skills">
+        <h2>我的技能</h2>
+        <div class="skill-list">
+            <div class="skill-item">
+                <i class="fa-solid fa-code"></i>
+                <h3>C语言</h3>
+                <p>基础语法/指针/结构体</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Web安全</h3>
+                <p>SQL注入/XSS/漏洞挖掘</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-terminal"></i>
+                <h3>Linux</h3>
+                <p>Kali命令/脚本编写</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <h3>CTF</h3>
+                <p>Web方向解题/团队协作</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部联系 -->
+    <footer id="contact">
+        <p>邮箱：3450833884@qq.com | 版权所有 © 2025 个人主页</p>
+    </footer>
+
+    <script>
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
